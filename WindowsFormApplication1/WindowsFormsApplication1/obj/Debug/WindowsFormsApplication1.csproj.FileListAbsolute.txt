@@ -10,3 +10,12 @@ c:\users\tjfri\onedrive\documents\visual studio 2015\Projects\WindowsFormsApplic
 C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\SortingVisualizer.Form1.resources
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

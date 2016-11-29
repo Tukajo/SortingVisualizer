@@ -1,35 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace SortingVisualizer
+namespace SortingVisualizeer
 {
-    static class Program
+    public class MergeSort
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-
-            int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
-            int length = 9;
-
-            Console.WriteLine("Mergesort: ");
-            MergeSortRecursive(numbers, 0, length - 1);
-
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine(numbers[i]);
-            }
-        }
-
         static public void DoMerge(int[] numbers, int left, int middle, int right)
         {
             int[] temp = new int[25];
@@ -39,9 +17,9 @@ namespace SortingVisualizer
             tempPosition = left;
             numberElements = (right - left + 1);
 
-            while ((left <= leftEnd) && (middle <= right))
+            while((left <= leftEnd) && (middle <= right))
             {
-                if (numbers[left] <= numbers[middle])
+                if(numbers[left] <= numbers[middle])
                 {
                     temp[tempPosition++] = numbers[left++];
                 }
@@ -51,17 +29,17 @@ namespace SortingVisualizer
                 }
             }
 
-            while (left <= leftEnd)
+            while(left <= leftEnd)
             {
                 temp[tempPosition++] = numbers[left++];
             }
 
-            while (middle <= right)
+            while(middle <= right)
             {
                 temp[tempPosition++] = numbers[middle++];
             }
 
-            for (i = 0; i < numberElements; i++)
+            for(i = 0; i < numberElements; i++)
             {
                 numbers[right] = temp[right];
                 right--;
@@ -72,7 +50,7 @@ namespace SortingVisualizer
         {
             int middle;
 
-            if (right > left)
+            if(right > left)
             {
                 middle = (right + left) / 2;
                 MergeSortRecursive(numbers, left, middle);
@@ -81,5 +59,19 @@ namespace SortingVisualizer
                 DoMerge(numbers, left, (middle + 1), right);
             }
         }
+
+        //static void Main(string[] args)
+        //{
+        //    int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
+        //    int length = 9;
+
+        //    Console.WriteLine("Mergesort: ");
+        //    MergeSortRecursive(numbers, 0, length - 1);
+
+        //    for(int i = 0; i < length; i++)
+        //    {
+        //        Console.WriteLine(numbers[i]);
+        //    }
+        //}
     }
 }
