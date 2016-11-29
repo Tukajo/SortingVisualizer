@@ -1,0 +1,3 @@
+C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\SortingVisualizer\SortingVisualizer\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\SortingVisualizer\SortingVisualizer\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Tjfri\OneDrive\Documents\Visual Studio 2015\Projects\SortingVisualizer\SortingVisualizer\obj\Debug\WindowsFormsApplication1.pdb
