@@ -6,33 +6,13 @@ using System.Threading.Tasks;
 
 namespace SortingVisualizer
 {
-    public class QuickSort
+    public class QuickSort2
     {
         static public void Execute()
         {
+            string[] unsorted = { "a", "e", "g", "z", "k", "l", "w", "p", "h" };
 
-            //User input for number of characters to use in sort
-            Console.WriteLine("Input the number of characters or strings you wish to sort: ");
-            int numChar = Convert.ToInt32(Console.ReadLine());
-
-            // Create an unsorted array of string elements            
-            string[] unsorted = new string[numChar];
-
-            //User input characters into array
-            for (int i = 0; i < numChar; i++)
-            {
-                if (i != 0)
-                {
-                    Console.WriteLine("Enter another Character or String: ");
-                    unsorted[i] = Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("Enter a character or String: ");
-                    unsorted[i] = Console.ReadLine();
-                }
-
-            }
+            Console.WriteLine("Before Sort: ");
 
             // Print the unsorted array
             for (int i = 0; i < unsorted.Length; i++)
@@ -40,18 +20,16 @@ namespace SortingVisualizer
                 Console.Write(unsorted[i] + " ");
             }
 
-            Console.WriteLine();
-
             // Sort the array
             Quicksort(unsorted, 0, unsorted.Length - 1);
+
+            Console.WriteLine("\n\nAfter Sort: ");
 
             // Print the sorted array
             for (int i = 0; i < unsorted.Length; i++)
             {
                 Console.Write(unsorted[i] + " ");
             }
-
-            Console.WriteLine();
 
             Console.ReadLine();
         }

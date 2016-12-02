@@ -19,7 +19,7 @@ namespace SortingVisualizer
             Application.Run(new Form1());
 
             MergeSort.Execute();
-            QuickSort.Execute();
+            QuickSort2.Execute();
         }
     }
 }
