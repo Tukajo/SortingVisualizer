@@ -8,7 +8,7 @@ namespace SortingVisualizer
 {
     public class Heapsort
     {
-        static void Execute(int[] input)
+        public static void Execute(int[] input)
         {
             int heapSize = input.Length;
             for(int i = (heapSize - 1) / 2; i >= 0; i--)
