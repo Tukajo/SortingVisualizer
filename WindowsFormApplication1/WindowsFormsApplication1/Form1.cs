@@ -73,11 +73,6 @@ namespace SortingVisualizer
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
-            foreach(DataPoint p in chart1.Series["Series1"].Points)
-            {
-                Console.WriteLine(p);
-            }
-
         }
 
         public void swapChartIndices(int o, int n)
