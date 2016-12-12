@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SortingVisualizer
 {
     public partial class Form1 : Form
     {
         static Random rnd = new Random();
-        int[] randomizedArray;
+        public int[] randomizedArray;
+
         public Form1()
         {
             InitializeComponent();
@@ -71,6 +73,22 @@ namespace SortingVisualizer
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
+            foreach(DataPoint p in chart1.Series["Series1"].Points)
+            {
+                Console.WriteLine(p);
+            }
+            chart1.Series["Series1"].Points.
+        }
+
+        public void swapChartIndices(int o, int n)
+        {
+            DataPoint temp;
+            temp = chart1.Series["Series1"].Points.ElementAt(o);
+            chart1.Series["Series1"].Points.RemoveAt(o) 
+            //chart1.Series["Series1"].Points.InsertXY(n,)
+                
+                chart1.Series["Series1"].Points.ElementAt(n);
+
         }
 
         static void Shuffle(int[] array)
