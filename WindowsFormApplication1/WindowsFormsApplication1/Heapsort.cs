@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SortingVisualizer
 {
@@ -24,6 +25,9 @@ namespace SortingVisualizer
 
                 heapSize--;
                 HeapsortMax(input, heapSize, 0);
+
+                Console.WriteLine("i: " + input[i]);
+                MessageBox.Show("i " + input[i]);
             }
         }
 

@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using OxyPlot;
 
 namespace SortingVisualizer
 {
     public partial class Form1 : Form
     {
-        Random rnd = new Random();
-        bool hasSelectedAlgorithm;
+        static Random rnd = new Random();
+        public int[] randomizedArray;
         int selectedIndex;
 
         public Form1()
         {
             InitializeComponent();
+
+            //randomizedArray = dataSizeTrackBar.Value;
 
             chart1.Series.Add("Series1");
             chart1.Series["Series1"].SetDefault(true);
@@ -63,16 +64,33 @@ namespace SortingVisualizer
         {
             chart1.Series.Clear();
             chart1.Series.Add("Series1");
+            randomizedArray = new int[dataSizeTrackBar.Value];
             for (int i = 0; i < dataSizeTrackBar.Value;i++)
             {
-                chart1.Series["Series1"].Points.AddXY(i, i);
+                randomizedArray[i] = i;
+                
+            }
+            Shuffle(randomizedArray);
+            for(int i = 0; i < randomizedArray.Length; i++)
+            {
+                chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
+            }
+        }
+
+        static void Shuffle(int[] array)
+        {
+            int n = array.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int r = i + (int)(rnd.NextDouble() * (n - i));
+                int t = array[r];
+                array[r] = array[i];
+                array[i] = t;
             }
         }
 
         private void runButton_MouseClick(object sender, MouseEventArgs e)
         {
-            int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
-
             if (selectedIndex == 0)
             {
 
@@ -83,11 +101,11 @@ namespace SortingVisualizer
             }
             else if(selectedIndex == 2)
             {
-                Bubblesort.Execute(numbers);
+                Bubblesort.Execute(randomizedArray);
             }
             else if(selectedIndex == 3)
             {
-                Heapsort.Execute(numbers);
+                Heapsort.Execute(randomizedArray);
             }
             else
             {
