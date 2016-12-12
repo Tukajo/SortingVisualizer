@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,7 @@
             this.dataSizeTrackBar = new System.Windows.Forms.TrackBar();
             this.runButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
+            this.statisticsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
@@ -95,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(245, 9);
+            this.label3.Location = new System.Drawing.Point(211, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
@@ -112,12 +113,12 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            chartArea4.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chartArea2.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(335, 34);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
@@ -157,11 +158,20 @@
             this.stopButton.Text = "Stop";
             this.stopButton.UseVisualStyleBackColor = true;
             // 
+            // statisticsLabel
+            // 
+            this.statisticsLabel.Location = new System.Drawing.Point(211, 34);
+            this.statisticsLabel.Name = "statisticsLabel";
+            this.statisticsLabel.Size = new System.Drawing.Size(118, 264);
+            this.statisticsLabel.TabIndex = 12;
+            this.statisticsLabel.Text = "No stats yet!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.statisticsLabel);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.dataSizeTrackBar);
@@ -197,6 +207,7 @@
         private System.Windows.Forms.TrackBar dataSizeTrackBar;
         private System.Windows.Forms.Button runButton;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Label statisticsLabel;
     }
 }
 

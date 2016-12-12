@@ -21,7 +21,6 @@ namespace SortingVisualizer
         {
             InitializeComponent();
 
-            //randomizedArray = dataSizeTrackBar.Value;
 
             chart1.Series.Add("Series1");
             chart1.Series["Series1"].SetDefault(true);
@@ -41,7 +40,6 @@ namespace SortingVisualizer
             algorithmComboBox.Items.Add("MergeSort");
             algorithmComboBox.Items.Add("QuickSort");
             algorithmComboBox.Items.Add("BubbleSort");
-            algorithmComboBox.Items.Add("HeapSort");
         }
 
         private void algorithm_Menu_SelectIndexChanged(object Sender, EventArgs e)
@@ -76,21 +74,20 @@ namespace SortingVisualizer
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
-            foreach(DataPoint p in chart1.Series["Series1"].Points)
-            {
-                Console.WriteLine(p);
             }
-            chart1.Series["Series1"].Points.
-        }
 
         public void swapChartIndices(int o, int n)
         {
-            DataPoint temp;
-            temp = chart1.Series["Series1"].Points.ElementAt(o);
-            chart1.Series["Series1"].Points.RemoveAt(o) 
-            //chart1.Series["Series1"].Points.InsertXY(n,)
-                
-                chart1.Series["Series1"].Points.ElementAt(n);
+            DataPoint temp1, temp2;
+            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
+            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
+            //Remove both
+            chart1.Series["Series1"].Points.RemoveAt(o);
+            chart1.Series["Series1"].Points.RemoveAt(n);
+            //Swap both
+            chart1.Series["Series1"].Points.AddXY(temp1.XValue, temp2.YValues.GetValue(0));
+            chart1.Series["Series1"].Points.AddXY(temp2.XValue, temp1.YValues.GetValue(0));
+            chart1.Invalidate();
 
         }
 
@@ -105,22 +102,22 @@ namespace SortingVisualizer
                 array[i] = t;
             }
         }
-
         private void runButton_MouseClick(object sender, MouseEventArgs e)
         {
             if (selectedIndex == 0)
             {
 
             }
-            else if(selectedIndex == 1)
+            else if (selectedIndex == 1)
             {
 
             }
-            else if(selectedIndex == 2)
+            else if (selectedIndex == 2)
             {
                 Bubblesort.Execute(randomizedArray);
+                statisticsLabel.Text = "Bubblesort\n" + "Show O here: " + 0 + "\nShow comparisons here: " + 0;
             }
-            else if(selectedIndex == 3)
+            else if (selectedIndex == 3)
             {
                 Heapsort.Execute(randomizedArray);
             }
@@ -130,4 +127,5 @@ namespace SortingVisualizer
             }
         }
     }
+
 }
