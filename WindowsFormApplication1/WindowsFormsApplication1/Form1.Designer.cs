@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -110,12 +110,12 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            chartArea2.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            chartArea4.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea3);
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(335, 34);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
@@ -127,13 +127,13 @@
             // dataSizeTrackBar
             // 
             this.dataSizeTrackBar.Location = new System.Drawing.Point(12, 76);
-            this.dataSizeTrackBar.Maximum = 500;
+            this.dataSizeTrackBar.Maximum = 35;
             this.dataSizeTrackBar.Minimum = 1;
             this.dataSizeTrackBar.Name = "dataSizeTrackBar";
             this.dataSizeTrackBar.Size = new System.Drawing.Size(172, 45);
             this.dataSizeTrackBar.TabIndex = 9;
             this.dataSizeTrackBar.TickFrequency = 50;
-            this.dataSizeTrackBar.Value = 55;
+            this.dataSizeTrackBar.Value = 10;
             this.dataSizeTrackBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // Form1

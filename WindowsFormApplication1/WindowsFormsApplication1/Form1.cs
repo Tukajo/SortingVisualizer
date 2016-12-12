@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OxyPlot;
 
 namespace SortingVisualizer
 {
     public partial class Form1 : Form
     {
-        Random rnd = new Random();
+        static Random rnd = new Random();
+        int[] randomizedArray;
         public Form1()
         {
             InitializeComponent();
@@ -60,9 +60,28 @@ namespace SortingVisualizer
         {
             chart1.Series.Clear();
             chart1.Series.Add("Series1");
+            randomizedArray = new int[dataSizeTrackBar.Value];
             for (int i = 0; i < dataSizeTrackBar.Value;i++)
             {
-                chart1.Series["Series1"].Points.AddXY(i, i);
+                randomizedArray[i] = i;
+                
+            }
+            Shuffle(randomizedArray);
+            for(int i = 0; i < randomizedArray.Length; i++)
+            {
+                chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
+            }
+        }
+
+        static void Shuffle(int[] array)
+        {
+            int n = array.Length;
+            for (int i = 0; i < n; i++)
+            {
+                int r = i + (int)(rnd.NextDouble() * (n - i));
+                int t = array[r];
+                array[r] = array[i];
+                array[i] = t;
             }
         }
     }
