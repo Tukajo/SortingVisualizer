@@ -40,6 +40,7 @@ namespace SortingVisualizer
             algorithmComboBox.Items.Add("MergeSort");
             algorithmComboBox.Items.Add("QuickSort");
             algorithmComboBox.Items.Add("BubbleSort");
+            algorithmComboBox.Items.Add("HeapSort");
         }
 
         private void algorithm_Menu_SelectIndexChanged(object Sender, EventArgs e)

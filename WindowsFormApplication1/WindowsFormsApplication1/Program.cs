@@ -18,8 +18,8 @@ namespace SortingVisualizer
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            MergeSort.Execute();
-            QuickSort2.Execute();
+            //MergeSort.Execute();
+            //QuickSort2.Execute();
         }
     }
 }
