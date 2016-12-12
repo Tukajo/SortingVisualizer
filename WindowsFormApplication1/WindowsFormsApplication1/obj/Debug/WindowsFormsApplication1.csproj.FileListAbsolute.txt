@@ -19,3 +19,19 @@ D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\Windo
 D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\Student Data\Documents\GitHub\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\Eto.dll
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\OxyPlot.dll
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\Eto.xml
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\OxyPlot.pdb
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\OxyPlot.xml
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Tjfri\OneDrive\Documents\SortingVisualizer\WindowsFormApplication1\WindowsFormsApplication1\obj\Debug\SortingVisualizer.Form1.resources
