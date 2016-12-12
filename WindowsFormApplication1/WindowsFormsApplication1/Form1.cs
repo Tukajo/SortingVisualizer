@@ -77,17 +77,21 @@ namespace SortingVisualizer
             {
                 Console.WriteLine(p);
             }
-            chart1.Series["Series1"].Points.
+
         }
 
         public void swapChartIndices(int o, int n)
         {
-            DataPoint temp;
-            temp = chart1.Series["Series1"].Points.ElementAt(o);
-            chart1.Series["Series1"].Points.RemoveAt(o) 
-            //chart1.Series["Series1"].Points.InsertXY(n,)
-                
-                chart1.Series["Series1"].Points.ElementAt(n);
+            DataPoint temp1, temp2;
+            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
+            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
+            //Remove both
+            chart1.Series["Series1"].Points.RemoveAt(o);
+            chart1.Series["Series1"].Points.RemoveAt(n);
+            //Swap both
+            chart1.Series["Series1"].Points.AddXY(temp1.XValue, temp2.YValues.GetValue(0));
+            chart1.Series["Series1"].Points.AddXY(temp2.XValue, temp1.YValues.GetValue(0));
+            chart1.Invalidate();
 
         }
 
