@@ -17,8 +17,6 @@ namespace SortingVisualizer
         public int[] randomizedArray;
         int selectedIndex;
 
-        public int[] randomizedArray;
-
         public Form1()
         {
             InitializeComponent();
