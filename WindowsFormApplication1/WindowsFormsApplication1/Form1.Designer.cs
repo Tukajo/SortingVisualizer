@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataTypeComboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataSizeTrackBar = new System.Windows.Forms.TrackBar();
+            this.runButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // algorithmComboBox
@@ -59,38 +68,29 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(407, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(838, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 508);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 508);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(404, 9);
+            this.label1.Location = new System.Drawing.Point(835, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Psuedocode";
-            // 
-            // dataTypeComboBox1
-            // 
-            this.dataTypeComboBox1.FormattingEnabled = true;
-            this.dataTypeComboBox1.Location = new System.Drawing.Point(12, 76);
-            this.dataTypeComboBox1.Name = "dataTypeComboBox1";
-            this.dataTypeComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.dataTypeComboBox1.TabIndex = 4;
-            this.dataTypeComboBox1.Text = "-- Select Data --";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Select Data";
+            this.label2.Text = "Select Data Size";
             // 
             // label3
             // 
@@ -101,14 +101,74 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Statistics";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(332, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Graph";
+            // 
+            // chart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            chartArea4.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea3);
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(335, 34);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chart1.Size = new System.Drawing.Size(497, 508);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // dataSizeTrackBar
+            // 
+            this.dataSizeTrackBar.Location = new System.Drawing.Point(12, 76);
+            this.dataSizeTrackBar.Maximum = 35;
+            this.dataSizeTrackBar.Minimum = 1;
+            this.dataSizeTrackBar.Name = "dataSizeTrackBar";
+            this.dataSizeTrackBar.Size = new System.Drawing.Size(172, 45);
+            this.dataSizeTrackBar.TabIndex = 9;
+            this.dataSizeTrackBar.TickFrequency = 50;
+            this.dataSizeTrackBar.Value = 10;
+            this.dataSizeTrackBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // runButton
+            // 
+            this.runButton.Location = new System.Drawing.Point(12, 151);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(179, 92);
+            this.runButton.TabIndex = 10;
+            this.runButton.Text = "Run!";
+            this.runButton.UseVisualStyleBackColor = true;
+            this.runButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.runButton_MouseClick);
+            // 
+            // stopButton
+            // 
+            this.stopButton.Location = new System.Drawing.Point(12, 249);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(179, 49);
+            this.stopButton.TabIndex = 11;
+            this.stopButton.Text = "Stop";
+            this.stopButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 558);
+            this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.stopButton);
+            this.Controls.Add(this.runButton);
+            this.Controls.Add(this.dataSizeTrackBar);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataTypeComboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.algorithmMenuLabel);
@@ -117,6 +177,8 @@
             this.Text = "Sorting Visualizer";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,9 +190,13 @@
         private System.Windows.Forms.Label algorithmMenuLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox dataTypeComboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TrackBar dataSizeTrackBar;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.Button stopButton;
     }
 }
 
