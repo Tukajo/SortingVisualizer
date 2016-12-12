@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataSizeTrackBar = new System.Windows.Forms.TrackBar();
+            this.runButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
@@ -136,11 +138,32 @@
             this.dataSizeTrackBar.Value = 10;
             this.dataSizeTrackBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
+            // runButton
+            // 
+            this.runButton.Location = new System.Drawing.Point(12, 151);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(179, 92);
+            this.runButton.TabIndex = 10;
+            this.runButton.Text = "Run!";
+            this.runButton.UseVisualStyleBackColor = true;
+            this.runButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.runButton_MouseClick);
+            // 
+            // stopButton
+            // 
+            this.stopButton.Location = new System.Drawing.Point(12, 249);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(179, 49);
+            this.stopButton.TabIndex = 11;
+            this.stopButton.Text = "Stop";
+            this.stopButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.stopButton);
+            this.Controls.Add(this.runButton);
             this.Controls.Add(this.dataSizeTrackBar);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label4);
@@ -172,6 +195,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TrackBar dataSizeTrackBar;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.Button stopButton;
     }
 }
 

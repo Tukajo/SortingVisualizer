@@ -21,13 +21,13 @@ namespace SortingVisualizer
             int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
             int length = 9;
 
-            Console.WriteLine("Mergesort: ");
-            MergeSortRecursive(numbers, 0, length - 1);
+            //Console.WriteLine("Mergesort: ");
+            //MergeSortRecursive(numbers, 0, length - 1);
 
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine(numbers[i]);
-            }
+            //for (int i = 0; i < length; i++)
+            //{
+            //    Console.WriteLine(numbers[i]);
+            //}
         }
 
         static public void DoMerge(int[] numbers, int left, int middle, int right)
@@ -80,6 +80,13 @@ namespace SortingVisualizer
 
                 DoMerge(numbers, left, (middle + 1), right);
             }
+        }
+
+        public static void UpdateVisualsAndSleep()
+        {
+            // update psuedocode
+            // update chart
+            System.Threading.Thread.Sleep(100);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace SortingVisualizer
     {
         static Random rnd = new Random();
         public int[] randomizedArray;
-
+        int selectedIndex;
         public Form1()
         {
             InitializeComponent();
@@ -43,9 +43,9 @@ namespace SortingVisualizer
 
         private void algorithm_Menu_SelectIndexChanged(object Sender, EventArgs e)
         {
-       
-            
-          
+            ComboBox cmb = (ComboBox)Sender;
+            selectedIndex = cmb.SelectedIndex;
+            MessageBox.Show("ss " + selectedIndex);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -101,5 +101,29 @@ namespace SortingVisualizer
                 array[i] = t;
             }
         }
+        private void runButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (selectedIndex == 0)
+            {
+
+            }
+            else if (selectedIndex == 1)
+            {
+
+            }
+            else if (selectedIndex == 2)
+            {
+                Bubblesort.Execute(randomizedArray);
+            }
+            else if (selectedIndex == 3)
+            {
+                Heapsort.Execute(randomizedArray);
+            }
+            else
+            {
+                MessageBox.Show("Please select an algorithm to visualize");
+            }
+        }
     }
+
 }
