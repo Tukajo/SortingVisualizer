@@ -81,5 +81,12 @@ namespace SortingVisualizer
                 DoMerge(numbers, left, (middle + 1), right);
             }
         }
+
+        public static void UpdateVisualsAndSleep()
+        {
+            // update psuedocode
+            // update chart
+            System.Threading.Thread.Sleep(100);
+        }
     }
 }
