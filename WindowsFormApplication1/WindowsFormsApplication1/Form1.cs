@@ -47,7 +47,23 @@ namespace SortingVisualizer
         {
             ComboBox cmb = (ComboBox)Sender;
             selectedIndex = cmb.SelectedIndex;
-            MessageBox.Show("ss " + selectedIndex);
+
+            if (selectedIndex == 0)
+            {
+                statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+            }
+            else if (selectedIndex == 1)
+            {
+                statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+            }
+            else if (selectedIndex == 2)
+            {
+                statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n)" + "\n\nComparisons: " + 0;
+            }
+            else if (selectedIndex == 3)
+            {
+                statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -107,22 +123,22 @@ namespace SortingVisualizer
         {
             if (selectedIndex == 0)
             {
-
+                
             }
             else if (selectedIndex == 1)
             {
-
+                
             }
             else if (selectedIndex == 2)
             {
                 int[] numbers = { 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
                 //Bubblesort.Execute(randomizedArray);
-                statisticsLabel.Text = "Bubblesort\n" + "Show O here: " + 0 + "\nShow comparisons here: " + 0;
                 Bubblesort.Execute(numbers);
             }
             else if (selectedIndex == 3)
             {
                 Heapsort.Execute(randomizedArray);
+
             }
             else
             {
