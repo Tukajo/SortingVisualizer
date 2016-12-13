@@ -51,18 +51,70 @@ namespace SortingVisualizer
             if (selectedIndex == 0)
             {
                 statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "MERGESORT";
+                pseudocodeLabel1.Text = "Start";
+                psuedocodeLabel2.Text = "   For";
+                psuedocodeLabel3.Text = "       If";
+                psuedocodeLabel4.Text = "           Do";
+                psuedocodeLabel5.Text = "       Else";
+                psuedocodeLabel6.Text = "      If";
+                psuedocodeLabel7.Text = "   If";
+                pseudocodeLabel8.Text = "   Else";
+                pseudocodeLabel9.Text = "   If";
+                pseudocodeLabel10.Text = "  For";
+                pseudocodeLabel11.Text = "End";
             }
             else if (selectedIndex == 1)
             {
                 statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "QUICKSORT";
+                pseudocodeLabel1.Text = "Start";
+                psuedocodeLabel2.Text = "   For";
+                psuedocodeLabel3.Text = "       If";
+                psuedocodeLabel4.Text = "           Do";
+                psuedocodeLabel5.Text = "       Else";
+                psuedocodeLabel6.Text = "      If";
+                psuedocodeLabel7.Text = "   If";
+                pseudocodeLabel8.Text = "   Else";
+                pseudocodeLabel9.Text = "   If";
+                pseudocodeLabel10.Text = "  For";
+                pseudocodeLabel11.Text = "End";
             }
             else if (selectedIndex == 2)
             {
                 statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n)" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "BUBBLESORT";
+                pseudocodeLabel1.Text = "Start";
+                psuedocodeLabel2.Text = "   For";
+                psuedocodeLabel3.Text = "       If";
+                psuedocodeLabel4.Text = "           Do";
+                psuedocodeLabel5.Text = "       Else";
+                psuedocodeLabel6.Text = "      If";
+                psuedocodeLabel7.Text = "   If";
+                pseudocodeLabel8.Text = "   Else";
+                pseudocodeLabel9.Text = "   If";
+                pseudocodeLabel10.Text = "  For";
+                pseudocodeLabel11.Text = "End";
             }
             else if (selectedIndex == 3)
             {
                 statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "BUBBELSORT";
+                pseudocodeLabel1.Text = "Start";
+                psuedocodeLabel2.Text = "   For";
+                psuedocodeLabel3.Text = "       If";
+                psuedocodeLabel4.Text = "           Do";
+                psuedocodeLabel5.Text = "       Else";
+                psuedocodeLabel6.Text = "      If";
+                psuedocodeLabel7.Text = "   If";
+                pseudocodeLabel8.Text = "   Else";
+                pseudocodeLabel9.Text = "   If";
+                pseudocodeLabel10.Text = "  For";
+                pseudocodeLabel11.Text = "End";
             }
         }
 

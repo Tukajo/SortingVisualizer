@@ -46,10 +46,15 @@
             this.pseudocodeLabel1 = new System.Windows.Forms.Label();
             this.psuedocodeLabel2 = new System.Windows.Forms.Label();
             this.psuedocodeLabel3 = new System.Windows.Forms.Label();
-            this.pseudocodeLabel4 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel4 = new System.Windows.Forms.Label();
             this.psuedocodeLabel5 = new System.Windows.Forms.Label();
             this.psuedocodeLabel6 = new System.Windows.Forms.Label();
             this.psuedocodeLabel7 = new System.Windows.Forms.Label();
+            this.algorithmLabel = new System.Windows.Forms.Label();
+            this.pseudocodeLabel8 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel9 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel10 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -167,10 +172,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pseudocodeLabel10);
+            this.panel1.Controls.Add(this.pseudocodeLabel9);
+            this.panel1.Controls.Add(this.pseudocodeLabel8);
+            this.panel1.Controls.Add(this.algorithmLabel);
             this.panel1.Controls.Add(this.psuedocodeLabel7);
             this.panel1.Controls.Add(this.psuedocodeLabel6);
             this.panel1.Controls.Add(this.psuedocodeLabel5);
-            this.panel1.Controls.Add(this.pseudocodeLabel4);
+            this.panel1.Controls.Add(this.psuedocodeLabel4);
             this.panel1.Controls.Add(this.psuedocodeLabel3);
             this.panel1.Controls.Add(this.psuedocodeLabel2);
             this.panel1.Controls.Add(this.pseudocodeLabel1);
@@ -181,7 +190,7 @@
             // 
             // pseudocodeLabel1
             // 
-            this.pseudocodeLabel1.Location = new System.Drawing.Point(1, 7);
+            this.pseudocodeLabel1.Location = new System.Drawing.Point(0, 37);
             this.pseudocodeLabel1.Name = "pseudocodeLabel1";
             this.pseudocodeLabel1.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel1.TabIndex = 0;
@@ -189,7 +198,7 @@
             // 
             // psuedocodeLabel2
             // 
-            this.psuedocodeLabel2.Location = new System.Drawing.Point(1, 50);
+            this.psuedocodeLabel2.Location = new System.Drawing.Point(0, 80);
             this.psuedocodeLabel2.Name = "psuedocodeLabel2";
             this.psuedocodeLabel2.Size = new System.Drawing.Size(261, 43);
             this.psuedocodeLabel2.TabIndex = 1;
@@ -197,23 +206,23 @@
             // 
             // psuedocodeLabel3
             // 
-            this.psuedocodeLabel3.Location = new System.Drawing.Point(3, 93);
+            this.psuedocodeLabel3.Location = new System.Drawing.Point(2, 123);
             this.psuedocodeLabel3.Name = "psuedocodeLabel3";
             this.psuedocodeLabel3.Size = new System.Drawing.Size(261, 43);
             this.psuedocodeLabel3.TabIndex = 2;
             this.psuedocodeLabel3.Text = "label";
             // 
-            // pseudocodeLabel4
+            // psuedocodeLabel4
             // 
-            this.pseudocodeLabel4.Location = new System.Drawing.Point(3, 136);
-            this.pseudocodeLabel4.Name = "pseudocodeLabel4";
-            this.pseudocodeLabel4.Size = new System.Drawing.Size(261, 43);
-            this.pseudocodeLabel4.TabIndex = 3;
-            this.pseudocodeLabel4.Text = "label";
+            this.psuedocodeLabel4.Location = new System.Drawing.Point(2, 166);
+            this.psuedocodeLabel4.Name = "psuedocodeLabel4";
+            this.psuedocodeLabel4.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel4.TabIndex = 3;
+            this.psuedocodeLabel4.Text = "label";
             // 
             // psuedocodeLabel5
             // 
-            this.psuedocodeLabel5.Location = new System.Drawing.Point(3, 179);
+            this.psuedocodeLabel5.Location = new System.Drawing.Point(2, 209);
             this.psuedocodeLabel5.Name = "psuedocodeLabel5";
             this.psuedocodeLabel5.Size = new System.Drawing.Size(261, 43);
             this.psuedocodeLabel5.TabIndex = 4;
@@ -221,7 +230,7 @@
             // 
             // psuedocodeLabel6
             // 
-            this.psuedocodeLabel6.Location = new System.Drawing.Point(1, 222);
+            this.psuedocodeLabel6.Location = new System.Drawing.Point(0, 252);
             this.psuedocodeLabel6.Name = "psuedocodeLabel6";
             this.psuedocodeLabel6.Size = new System.Drawing.Size(261, 43);
             this.psuedocodeLabel6.TabIndex = 5;
@@ -229,17 +238,58 @@
             // 
             // psuedocodeLabel7
             // 
-            this.psuedocodeLabel7.Location = new System.Drawing.Point(3, 265);
+            this.psuedocodeLabel7.Location = new System.Drawing.Point(2, 295);
             this.psuedocodeLabel7.Name = "psuedocodeLabel7";
             this.psuedocodeLabel7.Size = new System.Drawing.Size(261, 43);
             this.psuedocodeLabel7.TabIndex = 6;
             this.psuedocodeLabel7.Text = "label";
+            // 
+            // algorithmLabel
+            // 
+            this.algorithmLabel.Location = new System.Drawing.Point(-2, 0);
+            this.algorithmLabel.Name = "algorithmLabel";
+            this.algorithmLabel.Size = new System.Drawing.Size(261, 21);
+            this.algorithmLabel.TabIndex = 7;
+            this.algorithmLabel.Text = "Select an Algorithm";
+            // 
+            // pseudocodeLabel8
+            // 
+            this.pseudocodeLabel8.Location = new System.Drawing.Point(3, 338);
+            this.pseudocodeLabel8.Name = "pseudocodeLabel8";
+            this.pseudocodeLabel8.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel8.TabIndex = 8;
+            this.pseudocodeLabel8.Text = "label";
+            // 
+            // pseudocodeLabel9
+            // 
+            this.pseudocodeLabel9.Location = new System.Drawing.Point(3, 381);
+            this.pseudocodeLabel9.Name = "pseudocodeLabel9";
+            this.pseudocodeLabel9.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel9.TabIndex = 9;
+            this.pseudocodeLabel9.Text = "label";
+            // 
+            // pseudocodeLabel10
+            // 
+            this.pseudocodeLabel10.Location = new System.Drawing.Point(2, 424);
+            this.pseudocodeLabel10.Name = "pseudocodeLabel10";
+            this.pseudocodeLabel10.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel10.TabIndex = 10;
+            this.pseudocodeLabel10.Text = "label";
+            // 
+            // pseudocodeLabel11
+            // 
+            this.pseudocodeLabel11.Location = new System.Drawing.Point(839, 501);
+            this.pseudocodeLabel11.Name = "pseudocodeLabel11";
+            this.pseudocodeLabel11.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel11.TabIndex = 11;
+            this.pseudocodeLabel11.Text = "label";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.pseudocodeLabel11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statisticsLabel);
             this.Controls.Add(this.stopButton);
@@ -280,10 +330,15 @@
         private System.Windows.Forms.Label psuedocodeLabel7;
         private System.Windows.Forms.Label psuedocodeLabel6;
         private System.Windows.Forms.Label psuedocodeLabel5;
-        private System.Windows.Forms.Label pseudocodeLabel4;
+        private System.Windows.Forms.Label psuedocodeLabel4;
         private System.Windows.Forms.Label psuedocodeLabel3;
         private System.Windows.Forms.Label psuedocodeLabel2;
         private System.Windows.Forms.Label pseudocodeLabel1;
+        private System.Windows.Forms.Label algorithmLabel;
+        private System.Windows.Forms.Label pseudocodeLabel10;
+        private System.Windows.Forms.Label pseudocodeLabel9;
+        private System.Windows.Forms.Label pseudocodeLabel8;
+        private System.Windows.Forms.Label pseudocodeLabel11;
     }
 }
 
