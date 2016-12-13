@@ -77,8 +77,8 @@ namespace SortingVisualizer
 
             if (selectedIndex == 0)
             {
-                statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + 
-                    "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + comparisonsCount;
+                statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" +
+                    "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))";
 
                 algorithmLabel.Text = "MERGESORT";
                 ps1.Text = "Start";
@@ -95,8 +95,8 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 1)
             {
-                statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" + 
-                    "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + comparisonsCount;
+                statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" +
+                    "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))";
 
                 algorithmLabel.Text = "QUICKSORT";
                 ps1.Text = "Start";
@@ -113,8 +113,8 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 2)
             {
-                statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" + 
-                    "\n\nWorst: O(n^2)" + "\n\nBest: O(n)" + "\n\nComparisons: " + comparisonsCount;
+                statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" +
+                    "\n\nWorst: O(n^2)" + "\n\nBest: O(n)";
 
                 algorithmLabel.Text = "BUBBLESORT";
                 ps1.Text = "Start";
@@ -131,8 +131,8 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 3)
             {
-                statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + 
-                    "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + comparisonsCount;
+                statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" +
+                    "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))";
 
                 algorithmLabel.Text = "BUBBELSORT";
                 ps1.Text = "Start";
