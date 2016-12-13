@@ -184,7 +184,7 @@ namespace SortingVisualizer
         {
             if (selectedIndex == 0)
             {
-                
+                new MergeSort().DoMergeSort(chart1,randomizedArray);   
             }
             else if (selectedIndex == 1)
             {
