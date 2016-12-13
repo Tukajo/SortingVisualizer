@@ -13,30 +13,9 @@ namespace SortingVisualizer
 
         public void DoQuickSort(Chart input)
         {
-            //string[] unsorted = { "a", "e", "g", "z", "k", "l", "w", "p", "h" };
-
-            //Console.WriteLine("Before Sort: ");
-
-            // Print the unsorted array
-            //for (int i = 0; i < unsorted.Length; i++)
-            //{
-            //    Console.Write(unsorted[i] + " ");
-            //}
-
-            // Sort the array
             chart1 = input;
             //Quicksort(input, 0, input.Series["Series1"].Points.Count() - 1);
             Quicksort(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
-
-            //Console.WriteLine("\n\nAfter Sort: ");
-
-            // Print the sorted array
-            //for (int i = 0; i < unsorted.Length; i++)
-            //{
-            //    Console.Write(unsorted[i] + " ");
-            //}
-
-            //Console.ReadLine();
         }
 
         public void Quicksort(DataPointCollection input, int left, int right)
@@ -46,16 +25,6 @@ namespace SortingVisualizer
 
             while (i <= j)
             {
-                //while (input[i].CompareTo(pivot) < 0)
-                //{
-                //    i++;
-                //}
-
-                //while (input[j].CompareTo(pivot) > 0)
-                //{
-                //    j--;
-                //}
-
                 while (input[i].YValues.First() < pivot.YValues.First())
                 {
                     i++;
