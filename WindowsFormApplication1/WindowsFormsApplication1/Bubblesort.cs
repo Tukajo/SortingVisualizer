@@ -26,7 +26,7 @@ namespace SortingVisualizer
                 }
 
                 Console.WriteLine("i: " + input[i]);
-                MessageBox.Show("i " + input[i]);
+                //MessageBox.Show("i " + input[i]);
             }
         }
     }

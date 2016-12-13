@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,15 +41,29 @@
             this.dataSizeTrackBar = new System.Windows.Forms.TrackBar();
             this.runButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statisticsLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pseudocodeLabel1 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel2 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel3 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel4 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel5 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel6 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel7 = new System.Windows.Forms.Label();
+            this.algorithmLabel = new System.Windows.Forms.Label();
+            this.pseudocodeLabel8 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel9 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel10 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // algorithmComboBox
             // 
             this.algorithmComboBox.FormattingEnabled = true;
-            this.algorithmComboBox.Location = new System.Drawing.Point(12, 25);
+            this.algorithmComboBox.Location = new System.Drawing.Point(12, 34);
             this.algorithmComboBox.Name = "algorithmComboBox";
             this.algorithmComboBox.Size = new System.Drawing.Size(172, 21);
             this.algorithmComboBox.TabIndex = 0;
@@ -66,14 +79,6 @@
             this.algorithmMenuLabel.TabIndex = 1;
             this.algorithmMenuLabel.Text = "Select Algorithm";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(838, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 508);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -86,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 60);
+            this.label2.Location = new System.Drawing.Point(12, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 5;
@@ -95,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(245, 9);
+            this.label3.Location = new System.Drawing.Point(211, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
@@ -112,12 +117,12 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            chartArea4.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chartArea2.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(335, 34);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
@@ -128,7 +133,7 @@
             // 
             // dataSizeTrackBar
             // 
-            this.dataSizeTrackBar.Location = new System.Drawing.Point(12, 76);
+            this.dataSizeTrackBar.Location = new System.Drawing.Point(12, 87);
             this.dataSizeTrackBar.Maximum = 35;
             this.dataSizeTrackBar.Minimum = 1;
             this.dataSizeTrackBar.Name = "dataSizeTrackBar";
@@ -157,11 +162,136 @@
             this.stopButton.Text = "Stop";
             this.stopButton.UseVisualStyleBackColor = true;
             // 
+            // statisticsLabel
+            // 
+            this.statisticsLabel.Location = new System.Drawing.Point(211, 34);
+            this.statisticsLabel.Name = "statisticsLabel";
+            this.statisticsLabel.Size = new System.Drawing.Size(118, 264);
+            this.statisticsLabel.TabIndex = 12;
+            this.statisticsLabel.Text = "No stats yet!";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pseudocodeLabel10);
+            this.panel1.Controls.Add(this.pseudocodeLabel9);
+            this.panel1.Controls.Add(this.pseudocodeLabel8);
+            this.panel1.Controls.Add(this.algorithmLabel);
+            this.panel1.Controls.Add(this.pseudocodeLabel7);
+            this.panel1.Controls.Add(this.pseudocodeLabel6);
+            this.panel1.Controls.Add(this.pseudocodeLabel5);
+            this.panel1.Controls.Add(this.pseudocodeLabel4);
+            this.panel1.Controls.Add(this.pseudocodeLabel3);
+            this.panel1.Controls.Add(this.pseudocodeLabel2);
+            this.panel1.Controls.Add(this.pseudocodeLabel1);
+            this.panel1.Location = new System.Drawing.Point(838, 34);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(262, 508);
+            this.panel1.TabIndex = 13;
+            // 
+            // pseudocodeLabel1
+            // 
+            this.pseudocodeLabel1.Location = new System.Drawing.Point(0, 37);
+            this.pseudocodeLabel1.Name = "pseudocodeLabel1";
+            this.pseudocodeLabel1.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel1.TabIndex = 0;
+            this.pseudocodeLabel1.Text = "label";
+            // 
+            // pseudocodeLabel2
+            // 
+            this.pseudocodeLabel2.Location = new System.Drawing.Point(0, 80);
+            this.pseudocodeLabel2.Name = "pseudocodeLabel2";
+            this.pseudocodeLabel2.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel2.TabIndex = 1;
+            this.pseudocodeLabel2.Text = "label";
+            // 
+            // pseudocodeLabel3
+            // 
+            this.pseudocodeLabel3.Location = new System.Drawing.Point(2, 123);
+            this.pseudocodeLabel3.Name = "pseudocodeLabel3";
+            this.pseudocodeLabel3.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel3.TabIndex = 2;
+            this.pseudocodeLabel3.Text = "label";
+            // 
+            // pseudocodeLabel4
+            // 
+            this.pseudocodeLabel4.Location = new System.Drawing.Point(2, 166);
+            this.pseudocodeLabel4.Name = "pseudocodeLabel4";
+            this.pseudocodeLabel4.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel4.TabIndex = 3;
+            this.pseudocodeLabel4.Text = "label";
+            // 
+            // pseudocodeLabel5
+            // 
+            this.pseudocodeLabel5.Location = new System.Drawing.Point(2, 209);
+            this.pseudocodeLabel5.Name = "pseudocodeLabel5";
+            this.pseudocodeLabel5.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel5.TabIndex = 4;
+            this.pseudocodeLabel5.Text = "label";
+            // 
+            // pseudocodeLabel6
+            // 
+            this.pseudocodeLabel6.Location = new System.Drawing.Point(0, 252);
+            this.pseudocodeLabel6.Name = "pseudocodeLabel6";
+            this.pseudocodeLabel6.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel6.TabIndex = 5;
+            this.pseudocodeLabel6.Text = "label";
+            // 
+            // pseudocodeLabel7
+            // 
+            this.pseudocodeLabel7.Location = new System.Drawing.Point(2, 295);
+            this.pseudocodeLabel7.Name = "pseudocodeLabel7";
+            this.pseudocodeLabel7.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel7.TabIndex = 6;
+            this.pseudocodeLabel7.Text = "label";
+            // 
+            // algorithmLabel
+            // 
+            this.algorithmLabel.Location = new System.Drawing.Point(-2, 0);
+            this.algorithmLabel.Name = "algorithmLabel";
+            this.algorithmLabel.Size = new System.Drawing.Size(261, 21);
+            this.algorithmLabel.TabIndex = 7;
+            this.algorithmLabel.Text = "Select an Algorithm";
+            // 
+            // pseudocodeLabel8
+            // 
+            this.pseudocodeLabel8.Location = new System.Drawing.Point(3, 338);
+            this.pseudocodeLabel8.Name = "pseudocodeLabel8";
+            this.pseudocodeLabel8.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel8.TabIndex = 8;
+            this.pseudocodeLabel8.Text = "label";
+            // 
+            // pseudocodeLabel9
+            // 
+            this.pseudocodeLabel9.Location = new System.Drawing.Point(3, 381);
+            this.pseudocodeLabel9.Name = "pseudocodeLabel9";
+            this.pseudocodeLabel9.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel9.TabIndex = 9;
+            this.pseudocodeLabel9.Text = "label";
+            // 
+            // pseudocodeLabel10
+            // 
+            this.pseudocodeLabel10.Location = new System.Drawing.Point(2, 424);
+            this.pseudocodeLabel10.Name = "pseudocodeLabel10";
+            this.pseudocodeLabel10.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel10.TabIndex = 10;
+            this.pseudocodeLabel10.Text = "label";
+            // 
+            // pseudocodeLabel11
+            // 
+            this.pseudocodeLabel11.Location = new System.Drawing.Point(839, 501);
+            this.pseudocodeLabel11.Name = "pseudocodeLabel11";
+            this.pseudocodeLabel11.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel11.TabIndex = 11;
+            this.pseudocodeLabel11.Text = "label";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.pseudocodeLabel11);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.statisticsLabel);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.dataSizeTrackBar);
@@ -170,15 +300,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.algorithmMenuLabel);
             this.Controls.Add(this.algorithmComboBox);
             this.Name = "Form1";
             this.Text = "Sorting Visualizer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +317,6 @@
 
         private System.Windows.Forms.ComboBox algorithmComboBox;
         private System.Windows.Forms.Label algorithmMenuLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -197,6 +325,20 @@
         private System.Windows.Forms.TrackBar dataSizeTrackBar;
         private System.Windows.Forms.Button runButton;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Label statisticsLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label pseudocodeLabel7;
+        private System.Windows.Forms.Label pseudocodeLabel6;
+        private System.Windows.Forms.Label pseudocodeLabel5;
+        private System.Windows.Forms.Label pseudocodeLabel4;
+        private System.Windows.Forms.Label pseudocodeLabel3;
+        private System.Windows.Forms.Label pseudocodeLabel2;
+        private System.Windows.Forms.Label pseudocodeLabel1;
+        private System.Windows.Forms.Label algorithmLabel;
+        private System.Windows.Forms.Label pseudocodeLabel10;
+        private System.Windows.Forms.Label pseudocodeLabel9;
+        private System.Windows.Forms.Label pseudocodeLabel8;
+        private System.Windows.Forms.Label pseudocodeLabel11;
     }
 }
 

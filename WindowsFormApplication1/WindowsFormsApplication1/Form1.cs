@@ -16,10 +16,34 @@ namespace SortingVisualizer
         static Random rnd = new Random();
         public int[] randomizedArray;
         int selectedIndex;
+
+        public static Label ps1;
+        public static Label ps2;
+        public static Label ps3;
+        public static Label ps4;
+        public static Label ps5;
+        public static Label ps6;
+        public static Label ps7;
+        public static Label ps8;
+        public static Label ps9;
+        public static Label ps10;
+        public static Label ps11;
+
         public Form1()
         {
             InitializeComponent();
 
+            ps1 = pseudocodeLabel1;
+            ps2 = pseudocodeLabel2;
+            ps3 = pseudocodeLabel3;
+            ps4 = pseudocodeLabel4;
+            ps5 = pseudocodeLabel5;
+            ps6 = pseudocodeLabel6;
+            ps7 = pseudocodeLabel7;
+            ps8 = pseudocodeLabel8;
+            ps9 = pseudocodeLabel9;
+            ps10 = pseudocodeLabel10;
+            ps11 = pseudocodeLabel11;
 
             chart1.Series.Add("Series1");
             chart1.Series["Series1"].SetDefault(true);
@@ -39,13 +63,82 @@ namespace SortingVisualizer
             algorithmComboBox.Items.Add("MergeSort");
             algorithmComboBox.Items.Add("QuickSort");
             algorithmComboBox.Items.Add("BubbleSort");
+            algorithmComboBox.Items.Add("HeapSort");
         }
 
         private void algorithm_Menu_SelectIndexChanged(object Sender, EventArgs e)
         {
             ComboBox cmb = (ComboBox)Sender;
             selectedIndex = cmb.SelectedIndex;
-            MessageBox.Show("ss " + selectedIndex);
+
+            if (selectedIndex == 0)
+            {
+                statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "MERGESORT";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
+            }
+            else if (selectedIndex == 1)
+            {
+                statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "QUICKSORT";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
+            }
+            else if (selectedIndex == 2)
+            {
+                statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n)" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "BUBBLESORT";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
+            }
+            else if (selectedIndex == 3)
+            {
+                statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
+
+                algorithmLabel.Text = "BUBBELSORT";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -73,7 +166,7 @@ namespace SortingVisualizer
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
-        }
+            }
 
         public void swapChartIndices(int o, int n)
         {
@@ -105,23 +198,27 @@ namespace SortingVisualizer
         {
             if (selectedIndex == 0)
             {
-
+                
             }
             else if (selectedIndex == 1)
             {
-
+                
             }
             else if (selectedIndex == 2)
             {
-                Bubblesort.Execute(randomizedArray);
+                int[] numbers = { 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+                //Bubblesort.Execute(randomizedArray);
+                Bubblesort.Execute(numbers);
             }
             else if (selectedIndex == 3)
             {
                 Heapsort.Execute(randomizedArray);
+
             }
             else
             {
-                MessageBox.Show("Please select an algorithm to visualize");
+                MessageBox.Show("Please select an algorithm to visualize.");
+                return;
             }
         }
     }
