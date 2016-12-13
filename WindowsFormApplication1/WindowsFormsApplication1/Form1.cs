@@ -17,10 +17,33 @@ namespace SortingVisualizer
         public int[] randomizedArray;
         int selectedIndex;
 
+        public static Label ps1;
+        public static Label ps2;
+        public static Label ps3;
+        public static Label ps4;
+        public static Label ps5;
+        public static Label ps6;
+        public static Label ps7;
+        public static Label ps8;
+        public static Label ps9;
+        public static Label ps10;
+        public static Label ps11;
+
         public Form1()
         {
             InitializeComponent();
 
+            ps1 = pseudocodeLabel1;
+            ps2 = pseudocodeLabel2;
+            ps3 = pseudocodeLabel3;
+            ps4 = pseudocodeLabel4;
+            ps5 = pseudocodeLabel5;
+            ps6 = pseudocodeLabel6;
+            ps7 = pseudocodeLabel7;
+            ps8 = pseudocodeLabel8;
+            ps9 = pseudocodeLabel9;
+            ps10 = pseudocodeLabel10;
+            ps11 = pseudocodeLabel11;
 
             chart1.Series.Add("Series1");
             chart1.Series["Series1"].SetDefault(true);
@@ -53,68 +76,68 @@ namespace SortingVisualizer
                 statisticsLabel.Text = "MERGESORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
 
                 algorithmLabel.Text = "MERGESORT";
-                pseudocodeLabel1.Text = "Start";
-                psuedocodeLabel2.Text = "   For";
-                psuedocodeLabel3.Text = "       If";
-                psuedocodeLabel4.Text = "           Do";
-                psuedocodeLabel5.Text = "       Else";
-                psuedocodeLabel6.Text = "      If";
-                psuedocodeLabel7.Text = "   If";
-                pseudocodeLabel8.Text = "   Else";
-                pseudocodeLabel9.Text = "   If";
-                pseudocodeLabel10.Text = "  For";
-                pseudocodeLabel11.Text = "End";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
             }
             else if (selectedIndex == 1)
             {
                 statisticsLabel.Text = "QUICKSORT" + "\n\nBig-O Notation" + "\nAverage. O: O(n log(n))" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
 
                 algorithmLabel.Text = "QUICKSORT";
-                pseudocodeLabel1.Text = "Start";
-                psuedocodeLabel2.Text = "   For";
-                psuedocodeLabel3.Text = "       If";
-                psuedocodeLabel4.Text = "           Do";
-                psuedocodeLabel5.Text = "       Else";
-                psuedocodeLabel6.Text = "      If";
-                psuedocodeLabel7.Text = "   If";
-                pseudocodeLabel8.Text = "   Else";
-                pseudocodeLabel9.Text = "   If";
-                pseudocodeLabel10.Text = "  For";
-                pseudocodeLabel11.Text = "End";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
             }
             else if (selectedIndex == 2)
             {
                 statisticsLabel.Text = "BUBBLESORT" + "\n\nBig-O Notation" + "\nAverage: O(n^2)" + "\n\nWorst: O(n^2)" + "\n\nBest: O(n)" + "\n\nComparisons: " + 0;
 
                 algorithmLabel.Text = "BUBBLESORT";
-                pseudocodeLabel1.Text = "Start";
-                psuedocodeLabel2.Text = "   For";
-                psuedocodeLabel3.Text = "       If";
-                psuedocodeLabel4.Text = "           Do";
-                psuedocodeLabel5.Text = "       Else";
-                psuedocodeLabel6.Text = "      If";
-                psuedocodeLabel7.Text = "   If";
-                pseudocodeLabel8.Text = "   Else";
-                pseudocodeLabel9.Text = "   If";
-                pseudocodeLabel10.Text = "  For";
-                pseudocodeLabel11.Text = "End";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
             }
             else if (selectedIndex == 3)
             {
                 statisticsLabel.Text = "HEAPSORT" + "\n\nBig-O Notation" + "\nAverage: O(n log(n))" + "\n\nWorst: O(n log(n))" + "\n\nBest: O(n log(n))" + "\n\nComparisons: " + 0;
 
                 algorithmLabel.Text = "BUBBELSORT";
-                pseudocodeLabel1.Text = "Start";
-                psuedocodeLabel2.Text = "   For";
-                psuedocodeLabel3.Text = "       If";
-                psuedocodeLabel4.Text = "           Do";
-                psuedocodeLabel5.Text = "       Else";
-                psuedocodeLabel6.Text = "      If";
-                psuedocodeLabel7.Text = "   If";
-                pseudocodeLabel8.Text = "   Else";
-                pseudocodeLabel9.Text = "   If";
-                pseudocodeLabel10.Text = "  For";
-                pseudocodeLabel11.Text = "End";
+                ps1.Text = "Start";
+                ps2.Text = "   For";
+                ps3.Text = "       If";
+                ps4.Text = "           Do";
+                ps5.Text = "       Else";
+                ps6.Text = "      If";
+                ps7.Text = "   If";
+                ps8.Text = "   Else";
+                ps9.Text = "   If";
+                ps10.Text = "  For";
+                ps11.Text = "End";
             }
         }
 
