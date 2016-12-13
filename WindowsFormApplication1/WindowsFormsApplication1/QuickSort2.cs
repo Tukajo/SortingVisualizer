@@ -14,10 +14,10 @@ namespace SortingVisualizer
         public void DoQuickSort(Chart input)
         {
             chart1 = input;
-            QuickSort_Recursive(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
+            QuickSortRecursive(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
         }
 
-        public int Partition(DataPointCollection input, int left, int right)
+        public int Quicksort(DataPointCollection input, int left, int right)
         {
             var pivot = input.ElementAt(left).YValues.First();
             while (true)
@@ -41,17 +41,17 @@ namespace SortingVisualizer
             }
         }
 
-        public void QuickSort_Recursive(DataPointCollection input, int left, int right)
+        public void QuickSortRecursive(DataPointCollection input, int left, int right)
         {
             if (left < right)
             {
-                int pivot = Partition(input, left, right);
+                int pivot = Quicksort(input, left, right);
 
                 if (pivot > 1)
-                    QuickSort_Recursive(input, left, pivot - 1);
+                    QuickSortRecursive(input, left, pivot - 1);
 
                 if (pivot + 1 < right)
-                    QuickSort_Recursive(input, pivot + 1, right);
+                    QuickSortRecursive(input, pivot + 1, right);
             }
         }
 
