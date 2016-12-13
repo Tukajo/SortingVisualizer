@@ -162,26 +162,12 @@ namespace SortingVisualizer
                 
             }
             Shuffle(randomizedArray);
-            for(int i = 0; i < randomizedArray.Length; i++)
+            for(int i = 0; i < randomizedArray.Count(); i++)
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
-            }
-
-        public void swapChartIndices(int o, int n)
-        {
-            DataPoint temp1, temp2;
-            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
-            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
-            //Remove both
-            chart1.Series["Series1"].Points.RemoveAt(o);
-            chart1.Series["Series1"].Points.RemoveAt(n);
-            //Swap both
-            chart1.Series["Series1"].Points.AddXY(temp1.XValue, temp2.YValues.GetValue(0));
-            chart1.Series["Series1"].Points.AddXY(temp2.XValue, temp1.YValues.GetValue(0));
-            chart1.Invalidate();
-
         }
+
 
         static void Shuffle(int[] array)
         {
@@ -206,9 +192,7 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 2)
             {
-                int[] numbers = { 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-                //Bubblesort.Execute(randomizedArray);
-                Bubblesort.Execute(numbers);
+                new Bubblesort().DoBubbleSort(chart1);
             }
             else if (selectedIndex == 3)
             {
