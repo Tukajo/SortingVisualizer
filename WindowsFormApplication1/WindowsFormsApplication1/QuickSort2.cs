@@ -3,50 +3,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SortingVisualizer
 {
     public class QuickSort2
     {
-        static public void Execute()
-        {
-            string[] unsorted = { "a", "e", "g", "z", "k", "l", "w", "p", "h" };
+        Chart chart1;
 
-            Console.WriteLine("Before Sort: ");
+        public void DoQuickSort(Chart input)
+        {
+            //string[] unsorted = { "a", "e", "g", "z", "k", "l", "w", "p", "h" };
+
+            //Console.WriteLine("Before Sort: ");
 
             // Print the unsorted array
-            for (int i = 0; i < unsorted.Length; i++)
-            {
-                Console.Write(unsorted[i] + " ");
-            }
+            //for (int i = 0; i < unsorted.Length; i++)
+            //{
+            //    Console.Write(unsorted[i] + " ");
+            //}
 
             // Sort the array
-            Quicksort(unsorted, 0, unsorted.Length - 1);
+            chart1 = input;
+            //Quicksort(input, 0, input.Series["Series1"].Points.Count() - 1);
+            Quicksort(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
 
-            Console.WriteLine("\n\nAfter Sort: ");
+            //Console.WriteLine("\n\nAfter Sort: ");
 
             // Print the sorted array
-            for (int i = 0; i < unsorted.Length; i++)
-            {
-                Console.Write(unsorted[i] + " ");
-            }
+            //for (int i = 0; i < unsorted.Length; i++)
+            //{
+            //    Console.Write(unsorted[i] + " ");
+            //}
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
-        public static void Quicksort(IComparable[] elements, int left, int right)
+        public void Quicksort(DataPointCollection input, int left, int right)
         {
             int i = left, j = right;
-            IComparable pivot = elements[(left + right) / 2];
+            var pivot = input[(left + right) / 2];
 
             while (i <= j)
             {
-                while (elements[i].CompareTo(pivot) < 0)
+                //while (input[i].CompareTo(pivot) < 0)
+                //{
+                //    i++;
+                //}
+
+                //while (input[j].CompareTo(pivot) > 0)
+                //{
+                //    j--;
+                //}
+
+                while (input[i].YValues.First() < pivot.YValues.First())
                 {
                     i++;
                 }
 
-                while (elements[j].CompareTo(pivot) > 0)
+                while (input[j].YValues.First() > pivot.YValues.First())
                 {
                     j--;
                 }
@@ -54,9 +69,10 @@ namespace SortingVisualizer
                 if (i <= j)
                 {
                     // Swap
-                    IComparable tmp = elements[i];
-                    elements[i] = elements[j];
-                    elements[j] = tmp;
+                    //IComparable tmp = input[i];
+                    //input[i] = input[j];
+                    //input[j] = tmp;
+                    swapChartIndices(i, j);
 
                     i++;
                     j--;
@@ -66,13 +82,29 @@ namespace SortingVisualizer
             // Recursive calls
             if (left < j)
             {
-                Quicksort(elements, left, j);
+                Quicksort(input, left, j);
             }
 
             if (i < right)
             {
-                Quicksort(elements, i, right);
+                Quicksort(input, i, right);
             }
+        }
+
+        public void swapChartIndices(int o, int n)
+        {
+            DataPoint temp1, temp2;
+            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
+            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
+            double y1, y2;
+            y1 = temp2.YValues.First();
+            y2 = temp1.YValues.First();
+            //Remove both
+            chart1.Series["Series1"].Points.ElementAt(o).SetValueY(y1);
+            chart1.Series["Series1"].Points.ElementAt(n).SetValueY(y2);
+            //Swap both
+
+            chart1.Refresh();
         }
     }
 }
