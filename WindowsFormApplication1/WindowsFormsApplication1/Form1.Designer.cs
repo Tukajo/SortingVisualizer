@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,9 +42,17 @@
             this.runButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
             this.statisticsLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pseudocodeLabel1 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel2 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel3 = new System.Windows.Forms.Label();
+            this.pseudocodeLabel4 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel5 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel6 = new System.Windows.Forms.Label();
+            this.psuedocodeLabel7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // algorithmComboBox
@@ -66,14 +73,6 @@
             this.algorithmMenuLabel.Size = new System.Drawing.Size(83, 13);
             this.algorithmMenuLabel.TabIndex = 1;
             this.algorithmMenuLabel.Text = "Select Algorithm";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(838, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 508);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -113,12 +112,12 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            chartArea4.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            chartArea2.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(335, 34);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
@@ -166,11 +165,82 @@
             this.statisticsLabel.TabIndex = 12;
             this.statisticsLabel.Text = "No stats yet!";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.psuedocodeLabel7);
+            this.panel1.Controls.Add(this.psuedocodeLabel6);
+            this.panel1.Controls.Add(this.psuedocodeLabel5);
+            this.panel1.Controls.Add(this.pseudocodeLabel4);
+            this.panel1.Controls.Add(this.psuedocodeLabel3);
+            this.panel1.Controls.Add(this.psuedocodeLabel2);
+            this.panel1.Controls.Add(this.pseudocodeLabel1);
+            this.panel1.Location = new System.Drawing.Point(838, 34);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(262, 508);
+            this.panel1.TabIndex = 13;
+            // 
+            // pseudocodeLabel1
+            // 
+            this.pseudocodeLabel1.Location = new System.Drawing.Point(1, 7);
+            this.pseudocodeLabel1.Name = "pseudocodeLabel1";
+            this.pseudocodeLabel1.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel1.TabIndex = 0;
+            this.pseudocodeLabel1.Text = "label";
+            // 
+            // psuedocodeLabel2
+            // 
+            this.psuedocodeLabel2.Location = new System.Drawing.Point(1, 50);
+            this.psuedocodeLabel2.Name = "psuedocodeLabel2";
+            this.psuedocodeLabel2.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel2.TabIndex = 1;
+            this.psuedocodeLabel2.Text = "label";
+            // 
+            // psuedocodeLabel3
+            // 
+            this.psuedocodeLabel3.Location = new System.Drawing.Point(3, 93);
+            this.psuedocodeLabel3.Name = "psuedocodeLabel3";
+            this.psuedocodeLabel3.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel3.TabIndex = 2;
+            this.psuedocodeLabel3.Text = "label";
+            // 
+            // pseudocodeLabel4
+            // 
+            this.pseudocodeLabel4.Location = new System.Drawing.Point(3, 136);
+            this.pseudocodeLabel4.Name = "pseudocodeLabel4";
+            this.pseudocodeLabel4.Size = new System.Drawing.Size(261, 43);
+            this.pseudocodeLabel4.TabIndex = 3;
+            this.pseudocodeLabel4.Text = "label";
+            // 
+            // psuedocodeLabel5
+            // 
+            this.psuedocodeLabel5.Location = new System.Drawing.Point(3, 179);
+            this.psuedocodeLabel5.Name = "psuedocodeLabel5";
+            this.psuedocodeLabel5.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel5.TabIndex = 4;
+            this.psuedocodeLabel5.Text = "label";
+            // 
+            // psuedocodeLabel6
+            // 
+            this.psuedocodeLabel6.Location = new System.Drawing.Point(1, 222);
+            this.psuedocodeLabel6.Name = "psuedocodeLabel6";
+            this.psuedocodeLabel6.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel6.TabIndex = 5;
+            this.psuedocodeLabel6.Text = "label";
+            // 
+            // psuedocodeLabel7
+            // 
+            this.psuedocodeLabel7.Location = new System.Drawing.Point(3, 265);
+            this.psuedocodeLabel7.Name = "psuedocodeLabel7";
+            this.psuedocodeLabel7.Size = new System.Drawing.Size(261, 43);
+            this.psuedocodeLabel7.TabIndex = 6;
+            this.psuedocodeLabel7.Text = "label";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 584);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statisticsLabel);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.runButton);
@@ -180,15 +250,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.algorithmMenuLabel);
             this.Controls.Add(this.algorithmComboBox);
             this.Name = "Form1";
             this.Text = "Sorting Visualizer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +267,6 @@
 
         private System.Windows.Forms.ComboBox algorithmComboBox;
         private System.Windows.Forms.Label algorithmMenuLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -208,6 +276,14 @@
         private System.Windows.Forms.Button runButton;
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Label statisticsLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label psuedocodeLabel7;
+        private System.Windows.Forms.Label psuedocodeLabel6;
+        private System.Windows.Forms.Label psuedocodeLabel5;
+        private System.Windows.Forms.Label pseudocodeLabel4;
+        private System.Windows.Forms.Label psuedocodeLabel3;
+        private System.Windows.Forms.Label psuedocodeLabel2;
+        private System.Windows.Forms.Label pseudocodeLabel1;
     }
 }
 

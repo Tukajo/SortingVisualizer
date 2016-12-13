@@ -115,8 +115,10 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 2)
             {
-                Bubblesort.Execute(randomizedArray);
+                int[] numbers = { 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+                //Bubblesort.Execute(randomizedArray);
                 statisticsLabel.Text = "Bubblesort\n" + "Show O here: " + 0 + "\nShow comparisons here: " + 0;
+                Bubblesort.Execute(numbers);
             }
             else if (selectedIndex == 3)
             {
@@ -124,7 +126,8 @@ namespace SortingVisualizer
             }
             else
             {
-                MessageBox.Show("Please select an algorithm to visualize");
+                MessageBox.Show("Please select an algorithm to visualize.");
+                return;
             }
         }
     }
