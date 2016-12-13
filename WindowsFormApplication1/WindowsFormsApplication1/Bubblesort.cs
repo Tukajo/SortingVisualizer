@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace SortingVisualizer
     public class Bubblesort
     {
         Chart chart1;
+        Label previousLabel;
+
         public void DoBubbleSort(Chart input)
         {
             chart1 = input;
@@ -21,15 +24,17 @@ namespace SortingVisualizer
             // int temp = 0;
             for (int i = 0; i < input.Count(); i++)
             {
+                HighlightLabel(Form1.ps1);
                 for (int j = 0; j < input.Count() - 1; j++)
                 {
-
+                    HighlightLabel(Form1.ps2);
                     if (input.ElementAt(j).YValues.First() > input.ElementAt(j + 1).YValues.First())
                     {
-                        //Console.WriteLine("Xvalue is " + input.ElementAt(j).XValue + " J is " + j);
+                        HighlightLabel(Form1.ps3);
                         swapChartIndices(j, j + 1);
-                        System.Threading.Thread.Sleep(50);
+                        HighlightLabel(Form1.ps4);
                     }
+                    HighlightLabel(Form1.ps5);
                 }
             }
         }
@@ -48,6 +53,21 @@ namespace SortingVisualizer
             //Swap both
 
             chart1.Refresh();
+        }
+
+        void HighlightLabel(Label label)
+        {
+            if (previousLabel != null)
+            {
+                previousLabel.BackColor = SystemColors.InactiveCaption;
+                previousLabel.Refresh();
+                System.Threading.Thread.Sleep(Form1.sleepSpeed);
+            }
+
+            label.BackColor = System.Drawing.Color.Yellow;
+            label.Refresh();
+            previousLabel = label;
+            System.Threading.Thread.Sleep(Form1.sleepSpeed);
         }
     }
 }
