@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -126,12 +126,12 @@
             // 
             // chart1
             // 
-            chartArea17.Name = "ChartArea1";
-            chartArea18.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea17);
-            this.chart1.ChartAreas.Add(chartArea18);
-            legend9.Name = "Legend1";
-            this.chart1.Legends.Add(legend9);
+            chartArea19.Name = "ChartArea1";
+            chartArea20.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea19);
+            this.chart1.ChartAreas.Add(chartArea20);
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
             this.chart1.Location = new System.Drawing.Point(335, 42);
             this.chart1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chart1.Name = "chart1";
@@ -318,9 +318,9 @@
             this.label6.Location = new System.Drawing.Point(63, 206);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 15;
-            this.label6.Text = "1 sec Sleep";
+            this.label6.Text = ".5 sec Sleep";
             // 
             // Form1
             // 

@@ -38,7 +38,7 @@ namespace SortingVisualizer
         {
             InitializeComponent();
 
-            sleepSpeed = 100;
+            sleepSpeed = 50;
             randomizedArray = new int[dataSizeTrackBar.Value];
             for (int i = 0; i < dataSizeTrackBar.Value; i++)
             {
