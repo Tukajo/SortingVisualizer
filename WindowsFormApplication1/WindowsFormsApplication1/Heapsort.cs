@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace SortingVisualizer
     public class Heapsort
     {
         Chart chart1;
+        Label previousLabel;
 
         public void DoHeapSort(Chart input)
         {
@@ -41,19 +43,30 @@ namespace SortingVisualizer
             int right = (index + 1) * 2;
             int largest = 0;
 
+            HighlightLabel(Form1.ps1);
             if (left < heapSize && input.ElementAt(left).YValues.First() > input.ElementAt(index).YValues.First())
+            {
                 largest = left;
-            else
-                largest = index;
+            }
 
+            else
+            {
+                HighlightLabel(Form1.ps2);
+                largest = index;
+                HighlightLabel(Form1.ps3);
+            }
+
+            HighlightLabel(Form1.ps4);
             if (right < heapSize && input.ElementAt(right).YValues.First() > input.ElementAt(largest).YValues.First())
                 largest = right;
 
+            HighlightLabel(Form1.ps5);
             if (largest != index)
             {
+                HighlightLabel(Form1.ps6);
                 swapChartIndices(index, largest);
-
-                System.Threading.Thread.Sleep(50);
+                HighlightLabel(Form1.ps7);
+                //System.Threading.Thread.Sleep(50);
                 HeapsortMax(input, heapSize, largest);
             }
         }
@@ -72,6 +85,21 @@ namespace SortingVisualizer
             //Swap both
 
             chart1.Refresh();
+        }
+
+        void HighlightLabel(Label label)
+        {
+            if(previousLabel != null)
+            {
+                previousLabel.BackColor = SystemColors.Control;
+                previousLabel.Refresh();
+                System.Threading.Thread.Sleep(10);
+            }
+
+            label.BackColor = System.Drawing.Color.Yellow;
+            label.Refresh();
+            previousLabel = label;
+            System.Threading.Thread.Sleep(30);
         }
     }
 }

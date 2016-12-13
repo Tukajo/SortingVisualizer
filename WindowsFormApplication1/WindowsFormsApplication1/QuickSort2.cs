@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SortingVisualizer
@@ -10,6 +12,7 @@ namespace SortingVisualizer
     public class QuickSort2
     {
         Chart chart1;
+        Label previousLabel;
 
         public void DoQuickSort(Chart input)
         {
@@ -22,20 +25,31 @@ namespace SortingVisualizer
             var pivot = input.ElementAt(left).YValues.First();
             while (true)
             {
+                HighlightLabel(Form1.ps1);
                 while (input.ElementAt(left).YValues.First() < pivot)
+                {
+                    HighlightLabel(Form1.ps2);
                     left++;
+                    HighlightLabel(Form1.ps3);
+                }
 
                 while (input.ElementAt(right).YValues.First() > pivot)
+                {
+                    HighlightLabel(Form1.ps4);
                     right--;
+                    HighlightLabel(Form1.ps5);
+                }
 
                 if (left < right)
                 {
+                    HighlightLabel(Form1.ps6);
                     swapChartIndices(right, left);
-
-                    System.Threading.Thread.Sleep(50);
+                    HighlightLabel(Form1.ps7);
+                    HighlightLabel(Form1.ps8);
                 }
                 else
                 {
+                    HighlightLabel(Form1.ps9);
                     return right;
                 }
             }
@@ -48,10 +62,16 @@ namespace SortingVisualizer
                 int pivot = Quicksort(input, left, right);
 
                 if (pivot > 1)
+                {
+                    HighlightLabel(Form1.ps10);
                     QuickSortRecursive(input, left, pivot - 1);
+                }
 
                 if (pivot + 1 < right)
+                {
+                    HighlightLabel(Form1.ps11);
                     QuickSortRecursive(input, pivot + 1, right);
+                }
             }
         }
 
@@ -69,6 +89,21 @@ namespace SortingVisualizer
             //Swap both
 
             chart1.Refresh();
+        }
+
+        void HighlightLabel(Label label)
+        {
+            if (previousLabel != null)
+            {
+                previousLabel.BackColor = SystemColors.Control;
+                previousLabel.Refresh();
+                System.Threading.Thread.Sleep(10);
+            }
+
+            label.BackColor = System.Drawing.Color.Yellow;
+            label.Refresh();
+            previousLabel = label;
+            System.Threading.Thread.Sleep(30);
         }
     }
 }

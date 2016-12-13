@@ -184,7 +184,6 @@
             this.pseudocodeLabel10.Name = "pseudocodeLabel10";
             this.pseudocodeLabel10.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel10.TabIndex = 10;
-            this.pseudocodeLabel10.Text = "label";
             // 
             // pseudocodeLabel9
             // 
@@ -192,7 +191,6 @@
             this.pseudocodeLabel9.Name = "pseudocodeLabel9";
             this.pseudocodeLabel9.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel9.TabIndex = 9;
-            this.pseudocodeLabel9.Text = "label";
             // 
             // pseudocodeLabel8
             // 
@@ -200,7 +198,6 @@
             this.pseudocodeLabel8.Name = "pseudocodeLabel8";
             this.pseudocodeLabel8.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel8.TabIndex = 8;
-            this.pseudocodeLabel8.Text = "label";
             // 
             // algorithmLabel
             // 
@@ -216,7 +213,6 @@
             this.pseudocodeLabel7.Name = "pseudocodeLabel7";
             this.pseudocodeLabel7.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel7.TabIndex = 6;
-            this.pseudocodeLabel7.Text = "label";
             // 
             // pseudocodeLabel6
             // 
@@ -224,7 +220,6 @@
             this.pseudocodeLabel6.Name = "pseudocodeLabel6";
             this.pseudocodeLabel6.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel6.TabIndex = 5;
-            this.pseudocodeLabel6.Text = "label";
             // 
             // pseudocodeLabel5
             // 
@@ -232,7 +227,6 @@
             this.pseudocodeLabel5.Name = "pseudocodeLabel5";
             this.pseudocodeLabel5.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel5.TabIndex = 4;
-            this.pseudocodeLabel5.Text = "label";
             // 
             // pseudocodeLabel4
             // 
@@ -240,7 +234,6 @@
             this.pseudocodeLabel4.Name = "pseudocodeLabel4";
             this.pseudocodeLabel4.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel4.TabIndex = 3;
-            this.pseudocodeLabel4.Text = "label";
             // 
             // pseudocodeLabel3
             // 
@@ -248,7 +241,6 @@
             this.pseudocodeLabel3.Name = "pseudocodeLabel3";
             this.pseudocodeLabel3.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel3.TabIndex = 2;
-            this.pseudocodeLabel3.Text = "label";
             // 
             // pseudocodeLabel2
             // 
@@ -256,7 +248,6 @@
             this.pseudocodeLabel2.Name = "pseudocodeLabel2";
             this.pseudocodeLabel2.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel2.TabIndex = 1;
-            this.pseudocodeLabel2.Text = "label";
             // 
             // pseudocodeLabel1
             // 
@@ -264,7 +255,6 @@
             this.pseudocodeLabel1.Name = "pseudocodeLabel1";
             this.pseudocodeLabel1.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel1.TabIndex = 0;
-            this.pseudocodeLabel1.Text = "label";
             // 
             // pseudocodeLabel11
             // 
@@ -272,7 +262,6 @@
             this.pseudocodeLabel11.Name = "pseudocodeLabel11";
             this.pseudocodeLabel11.Size = new System.Drawing.Size(261, 43);
             this.pseudocodeLabel11.TabIndex = 11;
-            this.pseudocodeLabel11.Text = "label";
             // 
             // Form1
             // 
