@@ -3,76 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SortingVisualizer
 {
     public class QuickSort2
     {
-        static public void Execute()
+        Chart chart1;
+
+        public void DoQuickSort(Chart input)
         {
-            string[] unsorted = { "a", "e", "g", "z", "k", "l", "w", "p", "h" };
-
-            Console.WriteLine("Before Sort: ");
-
-            // Print the unsorted array
-            for (int i = 0; i < unsorted.Length; i++)
-            {
-                Console.Write(unsorted[i] + " ");
-            }
-
-            // Sort the array
-            Quicksort(unsorted, 0, unsorted.Length - 1);
-
-            Console.WriteLine("\n\nAfter Sort: ");
-
-            // Print the sorted array
-            for (int i = 0; i < unsorted.Length; i++)
-            {
-                Console.Write(unsorted[i] + " ");
-            }
-
-            Console.ReadLine();
+            chart1 = input;
+            QuickSort_Recursive(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
         }
 
-        public static void Quicksort(IComparable[] elements, int left, int right)
+        public int Partition(DataPointCollection input, int left, int right)
         {
-            int i = left, j = right;
-            IComparable pivot = elements[(left + right) / 2];
-
-            while (i <= j)
+            var pivot = input.ElementAt(left).YValues.First();
+            while (true)
             {
-                while (elements[i].CompareTo(pivot) < 0)
+                while (input.ElementAt(left).YValues.First() < pivot)
+                    left++;
+
+                while (input.ElementAt(right).YValues.First() > pivot)
+                    right--;
+
+                if (left < right)
                 {
-                    i++;
+                    swapChartIndices(right, left);
+
+                    System.Threading.Thread.Sleep(50);
                 }
-
-                while (elements[j].CompareTo(pivot) > 0)
+                else
                 {
-                    j--;
-                }
-
-                if (i <= j)
-                {
-                    // Swap
-                    IComparable tmp = elements[i];
-                    elements[i] = elements[j];
-                    elements[j] = tmp;
-
-                    i++;
-                    j--;
+                    return right;
                 }
             }
+        }
 
-            // Recursive calls
-            if (left < j)
+        public void QuickSort_Recursive(DataPointCollection input, int left, int right)
+        {
+            if (left < right)
             {
-                Quicksort(elements, left, j);
-            }
+                int pivot = Partition(input, left, right);
 
-            if (i < right)
-            {
-                Quicksort(elements, i, right);
+                if (pivot > 1)
+                    QuickSort_Recursive(input, left, pivot - 1);
+
+                if (pivot + 1 < right)
+                    QuickSort_Recursive(input, pivot + 1, right);
             }
+        }
+
+        public void swapChartIndices(int o, int n)
+        {
+            DataPoint temp1, temp2;
+            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
+            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
+            double y1, y2;
+            y1 = temp2.YValues.First();
+            y2 = temp1.YValues.First();
+            //Remove both
+            chart1.Series["Series1"].Points.ElementAt(o).SetValueY(y1);
+            chart1.Series["Series1"].Points.ElementAt(n).SetValueY(y2);
+            //Swap both
+
+            chart1.Refresh();
         }
     }
 }
