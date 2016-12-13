@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.algorithmComboBox = new System.Windows.Forms.ComboBox();
             this.algorithmMenuLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,9 +54,13 @@
             this.pseudocodeLabel2 = new System.Windows.Forms.Label();
             this.pseudocodeLabel1 = new System.Windows.Forms.Label();
             this.pseudocodeLabel11 = new System.Windows.Forms.Label();
+            this.speedTrackbar = new System.Windows.Forms.TrackBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.speedTrackbar)).BeginInit();
             this.SuspendLayout();
             // 
             // algorithmComboBox
@@ -122,12 +126,12 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            chartArea2.Name = "ChartArea2";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea17.Name = "ChartArea1";
+            chartArea18.Name = "ChartArea2";
+            this.chart1.ChartAreas.Add(chartArea17);
+            this.chart1.ChartAreas.Add(chartArea18);
+            legend9.Name = "Legend1";
+            this.chart1.Legends.Add(legend9);
             this.chart1.Location = new System.Drawing.Point(335, 42);
             this.chart1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chart1.Name = "chart1";
@@ -152,7 +156,7 @@
             // 
             // runButton
             // 
-            this.runButton.Location = new System.Drawing.Point(12, 186);
+            this.runButton.Location = new System.Drawing.Point(15, 254);
             this.runButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(179, 113);
@@ -286,12 +290,47 @@
             this.pseudocodeLabel11.Size = new System.Drawing.Size(260, 53);
             this.pseudocodeLabel11.TabIndex = 11;
             // 
+            // speedTrackbar
+            // 
+            this.speedTrackbar.Location = new System.Drawing.Point(12, 177);
+            this.speedTrackbar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.speedTrackbar.Minimum = 1;
+            this.speedTrackbar.Name = "speedTrackbar";
+            this.speedTrackbar.Size = new System.Drawing.Size(172, 45);
+            this.speedTrackbar.TabIndex = 10;
+            this.speedTrackbar.TickFrequency = 50;
+            this.speedTrackbar.Value = 5;
+            this.speedTrackbar.Scroll += new System.EventHandler(this.speedTrackbar_Scroll);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 157);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Select Increment Pause";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(63, 206);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "1 sec Sleep";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1112, 719);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.speedTrackbar);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pseudocodeLabel11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statisticsLabel);
@@ -312,6 +351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSizeTrackBar)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.speedTrackbar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,6 +382,9 @@
         private System.Windows.Forms.Label pseudocodeLabel9;
         private System.Windows.Forms.Label pseudocodeLabel8;
         private System.Windows.Forms.Label pseudocodeLabel11;
+        private System.Windows.Forms.TrackBar speedTrackbar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

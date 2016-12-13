@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,11 +30,21 @@ namespace SortingVisualizer
         public static Label ps10;
         public static Label ps11;
 
+        public static int sleepSpeed;
+
         public static int comparisonsCount;
 
         public Form1()
         {
             InitializeComponent();
+
+            sleepSpeed = 100;
+            randomizedArray = new int[dataSizeTrackBar.Value];
+            for (int i = 0; i < dataSizeTrackBar.Value; i++)
+            {
+                randomizedArray[i] = i;
+
+            }
 
             ps1 = pseudocodeLabel1;
             ps2 = pseudocodeLabel2;
@@ -144,6 +155,32 @@ namespace SortingVisualizer
                 ps10.Text = "";
                 ps11.Text = "";
             }
+
+            ps1.BackColor = SystemColors.InactiveCaption;
+            ps2.BackColor = SystemColors.InactiveCaption;
+            ps3.BackColor = SystemColors.InactiveCaption;
+            ps4.BackColor = SystemColors.InactiveCaption;
+            ps5.BackColor = SystemColors.InactiveCaption;
+            ps6.BackColor = SystemColors.InactiveCaption;
+            ps7.BackColor = SystemColors.InactiveCaption;
+            ps8.BackColor = SystemColors.InactiveCaption;
+            ps9.BackColor = SystemColors.InactiveCaption;
+            ps10.BackColor = SystemColors.InactiveCaption;
+            ps11.BackColor = SystemColors.InactiveCaption;
+
+            chart1.Series.Clear();
+            chart1.Series.Add("Series1");
+            randomizedArray = new int[dataSizeTrackBar.Value];
+            for (int i = 0; i < dataSizeTrackBar.Value; i++)
+            {
+                randomizedArray[i] = i;
+
+            }
+            Shuffle(randomizedArray);
+            for (int i = 0; i < randomizedArray.Count(); i++)
+            {
+                chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -171,8 +208,7 @@ namespace SortingVisualizer
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
-            }
-
+        }
 
         static void Shuffle(int[] array)
         {
@@ -185,6 +221,7 @@ namespace SortingVisualizer
                 array[i] = t;
             }
         }
+
         private void runButton_MouseClick(object sender, MouseEventArgs e)
         {
             if (selectedIndex == 0)
@@ -201,7 +238,6 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 3)
             {
-                //Heapsort.Execute(randomizedArray);
                 new Heapsort().DoHeapSort(chart1);
             }
             else
@@ -209,6 +245,22 @@ namespace SortingVisualizer
                 MessageBox.Show("Please select an algorithm to visualize.");
                 return;
             }
+        }
+
+        private void speedTrackbar_Scroll(object sender, EventArgs e)
+        {
+            sleepSpeed = speedTrackbar.Value;
+            
+            if(sleepSpeed == 10)
+            {
+                label6.Text = sleepSpeed/10 + " sec Sleep";
+            }
+            else
+            {
+                label6.Text = "." + sleepSpeed + " sec Sleep";
+            }
+            
+            label6.Refresh();
         }
     }
 

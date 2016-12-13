@@ -93,13 +93,13 @@ namespace SortingVisualizer
             {
                 previousLabel.BackColor = SystemColors.InactiveCaption;
                 previousLabel.Refresh();
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(Form1.sleepSpeed);
             }
 
             label.BackColor = System.Drawing.Color.Yellow;
             label.Refresh();
             previousLabel = label;
-            System.Threading.Thread.Sleep(30);
+            System.Threading.Thread.Sleep(Form1.sleepSpeed);
         }
     }
 }
