@@ -1,77 +1,84 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms.DataVisualization.Charting;
 namespace SortingVisualizer
 {
     public class MergeSort
     {
-        static public void DoMerge(int[] numbers, int left, int middle, int right)
+        Chart chart1;
+        public void DoMergeSort(Chart chartRef, int[] input)
         {
-            int[] temp = new int[25];
+            chart1 = chartRef;
+            Execute(input);
+        }
+         public void DoMerge(int[] numbers, int left, int middle, int right)
+        {
+            System.Threading.Thread.Sleep(100);
+
+            int[] temp = new int[numbers.Count()];
             int i, leftEnd, numberElements, tempPosition;
 
             leftEnd = (middle - 1);
             tempPosition = left;
             numberElements = (right - left + 1);
 
-            while((left <= leftEnd) && (middle <= right))
+            while ((left <= leftEnd) && (middle <= right))
             {
-                if(numbers[left] <= numbers[middle])
-                {
+                if (numbers[left] <= numbers[middle])
                     temp[tempPosition++] = numbers[left++];
-                }
                 else
-                {
                     temp[tempPosition++] = numbers[middle++];
-                }
             }
 
-            while(left <= leftEnd)
-            {
+            while (left <= leftEnd)
                 temp[tempPosition++] = numbers[left++];
-            }
 
-            while(middle <= right)
-            {
+            while (middle <= right)
                 temp[tempPosition++] = numbers[middle++];
-            }
 
-            for(i = 0; i < numberElements; i++)
+            for (i = 0; i < numberElements; i++)
             {
+
                 numbers[right] = temp[right];
+                reconstructChart(numbers);
                 right--;
             }
         }
 
-        static public void MergeSortRecursive(int[] numbers, int left, int right)
+         public void MergeSortRecursive(int[] input, int left, int right)
         {
+
             int middle;
 
             if(right > left)
             {
                 middle = (right + left) / 2;
-                MergeSortRecursive(numbers, left, middle);
-                MergeSortRecursive(numbers, (middle + 1), right);
+                MergeSortRecursive(input, left, middle);
+                MergeSortRecursive(input, (middle + 1), right);
 
-                DoMerge(numbers, left, (middle + 1), right);
+                DoMerge(input, left, (middle + 1), right);
             }
         }
 
-        static public void Execute()
+        public void reconstructChart(int[] input)
         {
-            int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
-            int length = 9;
 
-            Console.WriteLine("Mergesort: ");
-            MergeSortRecursive(numbers, 0, length - 1);
-
-            for (int i = 0; i < length; i++)
+            chart1.Series["Series1"].Points.Clear();
+            for (int i = 0; i < input.Count(); i++)
             {
-                Console.WriteLine(numbers[i]);
+                chart1.Series["Series1"].Points.AddXY(i, input[i]);
             }
+            chart1.Refresh();
+
+        }
+
+        public void Execute(int[] input)
+        {
+            MergeSortRecursive(input, 0, input.Length - 1);
         }
     }
 }
