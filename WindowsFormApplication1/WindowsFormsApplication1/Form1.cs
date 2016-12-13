@@ -69,27 +69,14 @@ namespace SortingVisualizer
                 
             }
             Shuffle(randomizedArray);
-            for(int i = 0; i < randomizedArray.Length; i++)
+            for(int i = 0; i < randomizedArray.Count(); i++)
             {
                 chart1.Series["Series1"].Points.AddXY(i, randomizedArray[i]);
             }
         }
 
-        public void swapChartIndices(int o, int n)
-        {
-            DataPoint temp1, temp2;
-            temp1 = chart1.Series["Series1"].Points.ElementAt(o);
-            temp2 = chart1.Series["Series1"].Points.ElementAt(n);
-            //Remove both
-            chart1.Series["Series1"].Points.RemoveAt(o);
-            chart1.Series["Series1"].Points.RemoveAt(n);
-            //Swap both
-            chart1.Series["Series1"].Points.AddXY(temp1.XValue, temp2.YValues.GetValue(0));
-            chart1.Series["Series1"].Points.AddXY(temp2.XValue, temp1.YValues.GetValue(0));
-            chart1.Invalidate();
-
-        }
-
+        
+        //Fisher-Yates Shuffle
         static void Shuffle(int[] array)
         {
             int n = array.Length;
@@ -113,7 +100,7 @@ namespace SortingVisualizer
             }
             else if (selectedIndex == 2)
             {
-                Bubblesort.Execute(randomizedArray);
+                new Bubblesort().DoBubbleSort(chart1);
             }
             else if (selectedIndex == 3)
             {
