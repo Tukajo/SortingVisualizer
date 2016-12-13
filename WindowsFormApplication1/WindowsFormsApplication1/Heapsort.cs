@@ -107,7 +107,7 @@ namespace SortingVisualizer
                 //input[index] = input[largest];
                 //input[largest] = temp;
                 swapChartIndices(index, largest);
-
+                System.Threading.Thread.Sleep(50);
                 HeapsortMax(input, heapSize, largest);
             }
         }

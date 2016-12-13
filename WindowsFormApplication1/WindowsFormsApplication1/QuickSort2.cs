@@ -14,49 +14,44 @@ namespace SortingVisualizer
         public void DoQuickSort(Chart input)
         {
             chart1 = input;
-            //Quicksort(input, 0, input.Series["Series1"].Points.Count() - 1);
-            Quicksort(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
+            QuickSort_Recursive(input.Series["Series1"].Points, 0, input.Series["Series1"].Points.Count() - 1);
         }
 
-        public void Quicksort(DataPointCollection input, int left, int right)
+        public int Partition(DataPointCollection input, int left, int right)
         {
-            int i = left, j = right;
-            var pivot = input[(left + right) / 2];
-
-            while (i <= j)
+            var pivot = input.ElementAt(left).YValues.First();
+            while (true)
             {
-                while (input[i].YValues.First() < pivot.YValues.First())
+                while (input.ElementAt(left).YValues.First() < pivot)
+                    left++;
+
+                while (input.ElementAt(right).YValues.First() > pivot)
+                    right--;
+
+                if (left < right)
                 {
-                    i++;
+                    swapChartIndices(right, left);
+
+                    System.Threading.Thread.Sleep(50);
                 }
-
-                while (input[j].YValues.First() > pivot.YValues.First())
+                else
                 {
-                    j--;
-                }
-
-                if (i <= j)
-                {
-                    // Swap
-                    //IComparable tmp = input[i];
-                    //input[i] = input[j];
-                    //input[j] = tmp;
-                    swapChartIndices(i, j);
-
-                    i++;
-                    j--;
+                    return right;
                 }
             }
+        }
 
-            // Recursive calls
-            if (left < j)
+        public void QuickSort_Recursive(DataPointCollection input, int left, int right)
+        {
+            if (left < right)
             {
-                Quicksort(input, left, j);
-            }
+                int pivot = Partition(input, left, right);
 
-            if (i < right)
-            {
-                Quicksort(input, i, right);
+                if (pivot > 1)
+                    QuickSort_Recursive(input, left, pivot - 1);
+
+                if (pivot + 1 < right)
+                    QuickSort_Recursive(input, pivot + 1, right);
             }
         }
 

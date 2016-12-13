@@ -28,7 +28,7 @@ namespace SortingVisualizer
                     {
                         //Console.WriteLine("Xvalue is " + input.ElementAt(j).XValue + " J is " + j);
                         swapChartIndices(j, j + 1);
-                        System.Threading.Thread.Sleep(100);
+                        System.Threading.Thread.Sleep(50);
                     }
                 }
             }
