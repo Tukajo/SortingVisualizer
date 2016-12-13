@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortingVisualizeer
+namespace SortingVisualizer
 {
     public class MergeSort
     {
@@ -60,18 +60,18 @@ namespace SortingVisualizeer
             }
         }
 
-        //static void Main(string[] args)
-        //{
-        //    int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
-        //    int length = 9;
+        static public void Execute()
+        {
+            int[] numbers = { 4, 6, 0, 7, 1, 2, 6, 3, 8 };
+            int length = 9;
 
-        //    Console.WriteLine("Mergesort: ");
-        //    MergeSortRecursive(numbers, 0, length - 1);
+            Console.WriteLine("Mergesort: ");
+            MergeSortRecursive(numbers, 0, length - 1);
 
-        //    for(int i = 0; i < length; i++)
-        //    {
-        //        Console.WriteLine(numbers[i]);
-        //    }
-        //}
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
     }
 }
