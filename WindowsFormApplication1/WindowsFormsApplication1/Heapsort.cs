@@ -91,7 +91,7 @@ namespace SortingVisualizer
         {
             if(previousLabel != null)
             {
-                previousLabel.BackColor = SystemColors.Control;
+                previousLabel.BackColor = SystemColors.InactiveCaption;
                 previousLabel.Refresh();
                 System.Threading.Thread.Sleep(10);
             }
